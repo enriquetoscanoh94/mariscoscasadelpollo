@@ -176,6 +176,10 @@ h3 { font-size: 1.5rem; }
   font-weight: 700;
   font-size: 1.15rem;
   color: var(--navy);
+  min-width: 0;
+}
+.nav-brand span {
+  line-height: 1.15;
 }
 .nav-brand img {
   width: 80px;
@@ -980,6 +984,9 @@ h3 { font-size: 1.5rem; }
   h2 { font-size: 2.25rem; }
   h3 { font-size: 1.25rem; }
   .nav-links { display: none; }
+  .nav-inner { gap: 12px; padding: 4px 16px; }
+  .nav-brand { gap: 8px; font-size: 0.98rem; }
+  .nav-brand span { max-width: 130px; }
   .nav-burger { display: flex; }
   .nav-links.open {
     display: flex;
