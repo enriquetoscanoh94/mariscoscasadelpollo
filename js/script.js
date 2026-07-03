@@ -72,6 +72,7 @@ const translations = {
     'footer-social-kicker': 'Síguenos en redes',
     'footer-social': 'Más sabor todos los días',
     'social-note': 'Mira platillos, bebidas, promos y antojos recién salidos de la cocina.',
+    'footer-credits': 'Créditos de imagen',
     'footer-rights': 'Todos los derechos reservados.',
     'footer-dev': 'Sitio hecho con ❤️ por ENT-CODE'
   },
@@ -147,6 +148,7 @@ const translations = {
     'footer-social-kicker': 'Follow us',
     'footer-social': 'Fresh flavor every day',
     'social-note': 'See dishes, drinks, promos and fresh cravings straight from the kitchen.',
+    'footer-credits': 'Image credits',
     'footer-rights': 'All rights reserved.',
     'footer-dev': 'Built with ❤️ by ENT-CODE'
   }

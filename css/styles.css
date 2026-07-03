@@ -885,6 +885,45 @@ h3 { font-size: 1.5rem; }
 }
 .dev-credit { color: var(--gold); }
 
+/* ===== IMAGE CREDITS ===== */
+.credits-page {
+  background: var(--cream);
+}
+.credits {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 48px 24px;
+}
+.credits-back {
+  display: inline-flex;
+  margin-bottom: 24px;
+  color: var(--red);
+  font-weight: 700;
+}
+.credits h1 {
+  color: var(--navy);
+  margin-bottom: 16px;
+}
+.credits p {
+  color: var(--gray);
+  margin-bottom: 24px;
+}
+.credits ul {
+  display: grid;
+  gap: 16px;
+  color: var(--navy);
+}
+.credits li {
+  padding: 18px;
+  background: var(--white);
+  border: 1px solid var(--gray-light);
+  border-radius: var(--radius);
+}
+.credits a {
+  color: var(--red);
+  font-weight: 700;
+}
+
 /* ===== Botón flotante de llamada ===== */
 .call-float {
   position: fixed;

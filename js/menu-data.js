@@ -919,7 +919,7 @@ const MENU = [
       {
         id: 'sodas',
         name: 'Sodas',
-        img: 'sodas-media-botella',
+        img: 'coca-cola',
         variants: [
           { label: { es: '½ litro botella', en: '½ liter bottle' }, price: 4.99 },
           { label: { es: 'Bote', en: 'Can' }, price: 3.99 }
