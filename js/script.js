@@ -69,8 +69,9 @@ const translations = {
     'footer-tag': 'Auténtico sabor sinaloense en Salinas desde 2010.',
     'footer-nav': 'Menú',
     'footer-contact': 'Contacto',
-    'footer-social': 'Síguenos',
-    'social-note': 'También en Yelp, Google & DoorDash',
+    'footer-social-kicker': 'Síguenos en redes',
+    'footer-social': 'Más sabor todos los días',
+    'social-note': 'Mira platillos, bebidas, promos y antojos recién salidos de la cocina.',
     'footer-rights': 'Todos los derechos reservados.',
     'footer-dev': 'Sitio hecho con ❤️ por ENT-CODE'
   },
@@ -143,8 +144,9 @@ const translations = {
     'footer-tag': 'Authentic Sinaloa flavor in Salinas since 2010.',
     'footer-nav': 'Menu',
     'footer-contact': 'Contact',
-    'footer-social': 'Follow Us',
-    'social-note': 'Also on Yelp, Google & DoorDash',
+    'footer-social-kicker': 'Follow us',
+    'footer-social': 'Fresh flavor every day',
+    'social-note': 'See dishes, drinks, promos and fresh cravings straight from the kitchen.',
     'footer-rights': 'All rights reserved.',
     'footer-dev': 'Built with ❤️ by ENT-CODE'
   }
