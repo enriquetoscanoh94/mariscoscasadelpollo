@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menú | Mariscos Casa del Pollo</title>
+  <meta name="description" content="Menú de Mariscos Casa del Pollo en Salinas, CA. Ceviches, tostadas, birria, mariscos y más con fotos y precios." />
+  <meta name="theme-color" content="#C1272D" />
+  <link rel="canonical" href="https://mariscoscasadelpolloca.com/menu.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Menú | Mariscos Casa del Pollo" />
+  <meta property="og:description" content="Menú completo con fotos y precios de Mariscos Casa del Pollo en Salinas, CA." />
+  <meta property="og:image" content="https://mariscoscasadelpolloca.com/assets/img/menu/aguachile.webp" />
+  <link rel="icon" type="image/png" href="assets/img/logo/favicon.png" />
+  <link rel="apple-touch-icon" href="assets/img/logo/apple-touch-icon.png" />
+  <link rel="manifest" href="site.webmanifest" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/menu.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand">
+        <img src="assets/img/logo/logo.webp" alt="Mariscos Casa del Pollo" width="360" height="360" />
+        <span>Casa del Pollo</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" data-i18n="nav-home">Home</a></li>
+        <li><a href="menu.html" class="active" data-i18n="nav-menu">Menú</a></li>
+        <li><a href="index.html#location" data-i18n="nav-location">Ubicación</a></li>
+        <li><a href="index.html#contact" data-i18n="nav-contact">Contacto</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="lang-toggle" id="langToggle" aria-label="Cambiar idioma / Change language">
+          <span class="lang-active">ES</span>
+          <span class="lang-sep">|</span>
+          <span>EN</span>
+        </button>
+        <button class="nav-burger" id="navBurger" aria-label="Menú" aria-expanded="false" aria-controls="navLinks">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ENCABEZADO -->
+  <header class="mp-hero">
+    <div class="container">
+      <span class="eyebrow light" data-i18n="hero-eyebrow">Mariscos Casa del Pollo</span>
+      <h1 data-i18n="hero-title">Nuestro Menú</h1>
+      <p data-i18n="hero-sub">Preparado al momento, todos los días</p>
+    </div>
+  </header>
+
+  <!-- NAVEGACIÓN DE CATEGORÍAS (generada desde js/menu-data.js) -->
+  <nav class="mp-catbar" aria-label="Categorías del menú">
+    <div class="mp-cat-wrap">
+      <button class="mp-cat-toggle" id="catToggle" aria-expanded="false" aria-controls="catList">
+        <span id="catToggleLabel">Categorías</span>
+        <svg class="mp-chevron" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <ul class="mp-cat-list" id="catList" role="menu"></ul>
+    </div>
+  </nav>
+
+  <!-- SECCIONES DEL MENÚ (generadas desde js/menu-data.js) -->
+  <main class="mp-main" id="menuRoot"></main>
+
+  <!-- CTA PEDIDOS -->
+  <section class="mp-cta">
+    <div class="container">
+      <h2 data-i18n="cta-title">¿Listo para ordenar?</h2>
+      <p data-i18n="cta-sub">Llámanos o mándanos mensaje y tu orden estará lista.</p>
+      <div class="mp-cta-btns">
+        <a href="tel:+18314434010" class="btn btn-primary" data-i18n="cta-call">Llamar (831) 443-4010</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="mp-footer">
+    <div class="container">
+      <p>Mariscos Casa del Pollo · 348 San Juan Grade Rd Ste 2, Salinas, CA 93906 · <a href="tel:+18314434010">(831) 443-4010</a></p>
+      <p class="dev-credit">© <span id="year"></span> Mariscos Casa del Pollo</p>
+    </div>
+  </footer>
+
+  <!-- Botón flotante de llamada -->
+  <a href="tel:+18314434010" class="call-float" aria-label="Llamar al restaurante">
+    <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+  </a>
+
+  <script src="js/site.js"></script>
+  <script src="js/menu-data.js"></script>
+  <script src="js/menu.js"></script>
+</body>
+</html>

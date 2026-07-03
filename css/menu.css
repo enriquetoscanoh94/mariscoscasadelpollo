@@ -1,0 +1,319 @@
+﻿/* ============================================================
+   Página de menú — Mariscos Casa del Pollo
+   Usa los tokens y componentes base de css/styles.css.
+   Prefijo .mp- (menu page) para no chocar con la home.
+   ============================================================ */
+
+/* ===== ENCABEZADO ===== */
+.mp-hero {
+  padding: 140px 0 48px;
+  background: linear-gradient(135deg, var(--navy), var(--navy-dark));
+  color: var(--white);
+  text-align: center;
+}
+.mp-hero h1 {
+  color: var(--white);
+  margin-bottom: 8px;
+}
+.mp-hero p {
+  opacity: 0.85;
+  font-weight: 300;
+}
+
+/* ===== NAV DE CATEGORÍAS (desplegable) ===== */
+.mp-catbar {
+  position: sticky;
+  top: 72px;
+  z-index: 90;
+  background: var(--cream);
+  border-bottom: 1px solid var(--gray-light);
+  padding: 12px 16px;
+}
+.mp-cat-wrap {
+  position: relative;
+  max-width: 480px;
+  margin: 0 auto;
+}
+.mp-cat-toggle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 13px 20px;
+  border-radius: var(--radius);
+  border: 2px solid var(--red);
+  background: var(--red);
+  color: var(--white);
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--trans);
+  box-shadow: var(--shadow-sm);
+}
+.mp-cat-toggle:active {
+  transform: scale(0.99);
+}
+.mp-chevron {
+  flex: 0 0 auto;
+  transition: var(--trans);
+}
+.mp-cat-wrap.open .mp-chevron {
+  transform: rotate(180deg);
+}
+.mp-cat-list {
+  display: none;
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  right: 0;
+  list-style: none;
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--gray-light);
+  overflow-y: auto;
+  max-height: 65vh;
+  z-index: 95;
+}
+.mp-cat-wrap.open .mp-cat-list {
+  display: block;
+  animation: catDrop 0.2s ease-out;
+}
+@keyframes catDrop {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.mp-cat-option {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 20px;
+  border: none;
+  border-bottom: 1px solid var(--gray-light);
+  background: var(--white);
+  color: var(--navy);
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-align: left;
+  cursor: pointer;
+  transition: var(--trans);
+}
+li:last-child > .mp-cat-option { border-bottom: none; }
+.mp-cat-option:hover {
+  background: var(--cream);
+}
+.mp-cat-option.active {
+  color: var(--red);
+  font-weight: 700;
+}
+.mp-cat-option.active::after {
+  content: '✓';
+  color: var(--red);
+  font-weight: 700;
+}
+
+/* ===== SECCIONES ===== */
+.mp-main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 24px 60px;
+}
+.mp-section {
+  padding-top: 40px;
+  /* compensa navbar + chips al navegar por ancla */
+  scroll-margin-top: 150px;
+}
+.mp-section-head {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+.mp-section-head h2 {
+  color: var(--navy);
+  white-space: nowrap;
+  min-width: 0;
+}
+.mp-section-head::after {
+  content: '';
+  flex: 1;
+  height: 3px;
+  border-radius: 2px;
+  background: linear-gradient(to right, var(--gold), transparent);
+}
+
+/* ===== TARJETAS ===== */
+.mp-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  gap: 24px;
+}
+.mp-card {
+  background: var(--white);
+  border: 1px solid var(--gray-light);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: var(--trans);
+  display: flex;
+  flex-direction: column;
+}
+.mp-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+}
+.mp-card-img {
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  position: relative;
+}
+.mp-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  padding: 4px 12px;
+  background: var(--gold);
+  color: var(--navy-dark);
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  box-shadow: var(--shadow-sm);
+}
+.mp-price-note {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--gray);
+}
+.mp-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--trans);
+}
+.mp-card:hover .mp-card-img img {
+  transform: scale(1.05);
+}
+.mp-card-body {
+  padding: 18px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+.mp-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+}
+.mp-card-top h3 {
+  color: var(--navy);
+  font-size: 1.3rem;
+  line-height: 1.15;
+}
+.mp-price {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.45rem;
+  color: var(--red);
+  white-space: nowrap;
+}
+.mp-desc {
+  color: var(--gray);
+  font-size: 0.9rem;
+  margin: 0;
+}
+.mp-variants {
+  list-style: none;
+  margin-top: auto;
+  padding-top: 6px;
+  border-top: 1px dashed var(--gray-light);
+}
+.mp-variants li {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 4px 0;
+  font-size: 0.9rem;
+  color: var(--navy);
+  font-weight: 500;
+}
+.mp-variants .mp-price {
+  font-size: 1.2rem;
+}
+
+/* ===== CTA ===== */
+.mp-cta {
+  background: linear-gradient(135deg, var(--red), var(--red-dark));
+  color: var(--white);
+  text-align: center;
+  padding: 70px 0;
+}
+.mp-cta h2 {
+  color: var(--white);
+  margin-bottom: 10px;
+}
+.mp-cta p {
+  opacity: 0.9;
+  margin-bottom: 28px;
+}
+.mp-cta-btns {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.mp-cta .btn-primary {
+  background: var(--white);
+  color: var(--red);
+}
+.mp-cta .btn-primary:hover {
+  background: var(--cream);
+}
+
+/* ===== FOOTER ===== */
+.mp-footer {
+  background: var(--navy-dark);
+  color: rgba(255, 255, 255, 0.7);
+  text-align: center;
+  padding: 28px 0;
+  font-size: 0.9rem;
+}
+.mp-footer a {
+  color: var(--gold);
+}
+.mp-footer .dev-credit {
+  margin-top: 6px;
+  font-size: 0.8rem;
+}
+
+/* ===== LINK ACTIVO EN NAVBAR ===== */
+.nav-links a.active {
+  color: var(--red);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .mp-hero { padding: 120px 0 36px; }
+  .mp-catbar { top: 64px; padding: 10px 16px; }
+  .mp-section { scroll-margin-top: 130px; }
+  .mp-main { padding: 12px 16px 40px; }
+  .mp-section-head h2 {
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+  .mp-grid {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 14px;
+  }
+  .mp-card-body { padding: 12px 14px 14px; }
+  .mp-card-top { flex-direction: column; gap: 2px; }
+  .mp-card-top h3 { font-size: 1.1rem; }
+  .mp-price { font-size: 1.25rem; }
+  .mp-desc { font-size: 0.8rem; }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "Mariscos Casa del Pollo",
+  "short_name": "Casa del Pollo",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FFF8E7",
+  "theme_color": "#C1272D",
+  "icons": [
+    {
+      "src": "/assets/img/logo/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}

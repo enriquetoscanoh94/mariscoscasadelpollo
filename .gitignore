@@ -1,0 +1,14 @@
+# Local source material and oversized originals
+/Casadelpollo.PNG
+/img/
+/assets/source/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Editor and runtime noise
+.vscode/
+.idea/
+node_modules/
+npm-debug.log*
