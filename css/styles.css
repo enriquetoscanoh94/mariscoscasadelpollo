@@ -16,6 +16,7 @@
   --radius: 8px;
   --radius-lg: 8px;
   --trans: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --ticker-h: 40px;
 }
 
 * {
@@ -26,7 +27,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 108px;
+  scroll-padding-top: 148px;
 }
 
 body {
@@ -144,10 +145,52 @@ h3 { font-size: 1.5rem; }
   box-shadow: 0 15px 40px rgba(228, 177, 42, 0.5);
 }
 
+/* ===== TICKER / BARRA EVENTOS ===== */
+.ticker {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 200;
+  height: var(--ticker-h);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  white-space: nowrap;
+  background: linear-gradient(90deg, var(--red), var(--red-dark));
+  color: var(--white);
+}
+.ticker__track {
+  display: flex;
+  flex-shrink: 0;
+  will-change: transform;
+  animation: ticker-scroll 30s linear infinite;
+}
+.ticker:hover .ticker__track {
+  animation-play-state: paused;
+}
+.ticker__group {
+  display: flex;
+  flex-shrink: 0;
+}
+.ticker__group span {
+  padding: 0 2.5rem;
+  font-weight: 600;
+  font-size: 0.92rem;
+  letter-spacing: 0.02em;
+}
+@keyframes ticker-scroll {
+  from { transform: translateX(-50%); }
+  to   { transform: translateX(0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ticker__track { animation: none; }
+}
+
 /* ===== NAVBAR ===== */
 .nav {
   position: fixed;
-  top: 0;
+  top: var(--ticker-h);
   left: 0;
   right: 0;
   z-index: 100;
@@ -589,6 +632,24 @@ h3 { font-size: 1.5rem; }
   color: var(--red);
 }
 .delivery-card.featured .delivery-cta { color: var(--gold); }
+
+/* ===== EVENTOS ===== */
+.events {
+  padding: 90px 0;
+  background: linear-gradient(135deg, var(--red), var(--red-dark));
+  color: var(--white);
+  text-align: center;
+}
+.events h2 {
+  color: var(--white);
+  margin: 12px 0 16px;
+}
+.events p {
+  font-size: 1.1rem;
+  opacity: 0.95;
+  max-width: 600px;
+  margin: 0 auto 32px;
+}
 
 /* ===== LOCATION ===== */
 .location {
