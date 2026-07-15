@@ -27,7 +27,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 148px;
+  scroll-padding-top: 220px;
 }
 
 body {
@@ -206,7 +206,7 @@ h3 { font-size: 1.5rem; }
 .nav-inner {
   max-width: 1300px;
   margin: 0 auto;
-  padding: 4px 24px;
+  padding: 16px 24px 4px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -310,7 +310,7 @@ h3 { font-size: 1.5rem; }
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 100px 24px 80px;
+  padding: 160px 24px 80px;
   background:
     linear-gradient(135deg, rgba(30, 58, 95, 0.85), rgba(193, 39, 45, 0.75)),
     url('../assets/img/menu/parrillada-de-mariscos.webp');
@@ -922,7 +922,7 @@ h3 { font-size: 1.5rem; }
   h2 { font-size: 2.25rem; }
   h3 { font-size: 1.25rem; }
   .nav-links { display: none; }
-  .nav-inner { gap: 12px; padding: 4px 16px; }
+  .nav-inner { gap: 12px; padding: 14px 16px 4px; }
   .nav-brand { gap: 8px; font-size: 0.98rem; }
   .nav-brand span { max-width: 130px; }
   .nav-burger { display: flex; }

@@ -6,7 +6,7 @@
 
 /* ===== ENCABEZADO ===== */
 .mp-hero {
-  padding: 140px 0 48px;
+  padding: 160px 0 48px;
   background: linear-gradient(135deg, var(--navy), var(--navy-dark));
   color: var(--white);
   text-align: center;
@@ -23,7 +23,7 @@
 /* ===== NAV DE CATEGORÍAS (desplegable) ===== */
 .mp-catbar {
   position: sticky;
-  top: 100px;
+  top: 141px;
   z-index: 90;
   background: var(--cream);
   border-bottom: 1px solid var(--gray-light);
@@ -126,7 +126,7 @@ li:last-child > .mp-cat-option { border-bottom: none; }
 .mp-section {
   padding-top: 40px;
   /* compensa navbar + chips al navegar por ancla */
-  scroll-margin-top: 150px;
+  scroll-margin-top: 220px;
 }
 .mp-section-head {
   display: flex;
@@ -299,9 +299,9 @@ li:last-child > .mp-cat-option { border-bottom: none; }
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
-  .mp-hero { padding: 120px 0 36px; }
-  .mp-catbar { top: 100px; padding: 10px 16px; }
-  .mp-section { scroll-margin-top: 172px; }
+  .mp-hero { padding: 150px 0 36px; }
+  .mp-catbar { top: 139px; padding: 10px 16px; }
+  .mp-section { scroll-margin-top: 220px; }
   .mp-main { padding: 12px 16px 40px; }
   .mp-section-head h2 {
     white-space: normal;

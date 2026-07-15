@@ -16,7 +16,8 @@ const UI = {
     'hero-sub': 'Preparado al momento, todos los días',
     'cta-title': '¿Listo para ordenar?',
     'cta-sub': 'Llámanos y tu orden estará lista.',
-    'cta-call': 'Llamar (831) 443-4010'
+    'cta-call': 'Llamar (831) 443-4010',
+    'ticker-msg': '🎉 Atendemos todo tipo de eventos — llámanos para cotizar (831) 443-4010'
   },
   en: {
     'nav-home': 'Home',
@@ -28,7 +29,8 @@ const UI = {
     'hero-sub': 'Made fresh, every day',
     'cta-title': 'Ready to order?',
     'cta-sub': 'Call us and your order will be ready.',
-    'cta-call': 'Call (831) 443-4010'
+    'cta-call': 'Call (831) 443-4010',
+    'ticker-msg': '🎉 We cater all kinds of events — call us for a quote (831) 443-4010'
   }
 };
 
